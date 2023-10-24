@@ -13,7 +13,7 @@ app.use(
   })
 );
 
-app.post("/user", (req, res) => {
+app.post("/signup", (req, res) => {
   console.log(req.body);
   const user = new User(req.body);
   user
@@ -24,15 +24,6 @@ app.post("/user", (req, res) => {
     .catch((err) => {
       res.status(404).send(err);
     });
-});
-
-app.get("/students", async (req, res) => {
-  try {
-    const userData = await User.find();
-    res.send(userData);
-  } catch (e) {
-    res.send(e);
-  }
 });
 
 app.get("/", (req, res) => {
