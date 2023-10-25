@@ -1,38 +1,54 @@
-import React from 'react'
-import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
+import React from "react";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Divider,
+  Link,
+  Image,
+} from "@nextui-org/react";
 
-const Sport_card = () => {
+type SportsCardProps = {
+  name: string;
+  img: string;
+  linkUrl: string;
+}
+
+const Sport_card = ({ name, img, linkUrl }:SportsCardProps) => {
   return (
-    <Card className="max-w-[400px]">
+    <Card className="max-w-[410px] mb-4">
       <CardHeader className="flex gap-3">
         <Image
-          alt="nextui logo"
+          alt="card logo"
           height={40}
           radius="sm"
-          src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
+          src="/daksha_logo.png"
           width={40}
         />
         <div className="flex flex-col">
-          <p className="text-md">NextUI</p>
-          <p className="text-small text-default-500">nextui.org</p>
+          <p className="text-md font-bold">{name}</p>
+          {/* <p className="text-small text-default-500">nextui.org</p> */}
         </div>
       </CardHeader>
-      <Divider/>
+      <Divider />
       <CardBody>
-        <p>Make beautiful websites regardless of your design experience.</p>
+        <div>
+          <Image
+            alt="Loading..."
+            className="z-0 w-full h-80 object-cover"
+            src={img}
+          />
+        </div>
       </CardBody>
-      <Divider/>
+      <Divider />
       <CardFooter>
-        <Link
-          isExternal
-          showAnchorIcon
-          href="https://github.com/nextui-org/nextui"
-        >
-          Visit source code on GitHub.
+        <Link showAnchorIcon href={linkUrl}>
+          Participate now !
         </Link>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 
-export default Sport_card
+export default Sport_card;
