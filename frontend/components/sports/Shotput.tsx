@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import {
   Card,
@@ -13,10 +13,9 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const Shotput = () => {
-
   const [name, setName] = useState("");
   const [branch, setBranch] = useState("");
   const [roll, setRoll] = useState("");
@@ -28,16 +27,16 @@ const Shotput = () => {
 
     if (!name || !branch || !roll || !batch || !phone) {
       Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'All fields are necessary.',
-        confirmButtonColor: '#D6465B',
+        icon: "error",
+        title: "Oops...",
+        text: "All fields are necessary.",
+        confirmButtonColor: "#D6465B",
       });
       return;
     }
 
     axios
-      .post(`http://127.0.0.1:8000/sports/shotput`, {
+      .post(`https://verve-fest.onrender.com/sports/shotput`, {
         name,
         branch,
         roll,
@@ -46,10 +45,10 @@ const Shotput = () => {
       })
       .then(() => {
         Swal.fire({
-          title: 'Done',
-          text: 'Your request has been successfully submitted',
-          icon: 'success',
-          confirmButtonColor: '#D6465B',
+          title: "Done",
+          text: "Your request has been successfully submitted",
+          icon: "success",
+          confirmButtonColor: "#D6465B",
         });
         setName("");
         setBranch("");
@@ -59,11 +58,11 @@ const Shotput = () => {
       })
       .catch((e) => {
         Swal.fire({
-					icon: 'error',
-					title: 'Oops...',
-					text: 'an error occurred',
-					confirmButtonColor: '#D6465B',
-				});
+          icon: "error",
+          title: "Oops...",
+          text: "an error occurred",
+          confirmButtonColor: "#D6465B",
+        });
       });
   };
 
@@ -84,31 +83,61 @@ const Shotput = () => {
         <Divider />
         <CardBody>
           <div>
-            <Input value={name} onChange={(e) => setName(e.target.value)} type="text" variant="underlined" label="name" />
+            <Input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              variant="underlined"
+              label="name"
+            />
           </div>
           <div className="mt-4">
-          <Input value={branch} onChange={(e) => setBranch(e.target.value)} type="text" variant="underlined" label="branch" />
+            <Input
+              value={branch}
+              onChange={(e) => setBranch(e.target.value)}
+              type="text"
+              variant="underlined"
+              label="branch"
+            />
           </div>
           <div className="mt-4">
-          <Input value={roll} onChange={(e) => setRoll(e.target.value)} type="text" variant="underlined" label="reg_no./roll_no." />
+            <Input
+              value={roll}
+              onChange={(e) => setRoll(e.target.value)}
+              type="text"
+              variant="underlined"
+              label="reg_no./roll_no."
+            />
           </div>
           <div className="mt-4">
-          <Input value={batch} onChange={(e) => setBatch(e.target.value)} type="text" variant="underlined" label="batch e.g -> 2k20 / 2k21 / 2k22 / 2k23" />
+            <Input
+              value={batch}
+              onChange={(e) => setBatch(e.target.value)}
+              type="text"
+              variant="underlined"
+              label="batch e.g -> 2k20 / 2k21 / 2k22 / 2k23"
+            />
           </div>
           <div className="mt-4">
-          <Input value={phone} onChange={(e) => setPhone(e.target.value)} type="text" variant="underlined" label="phone_no.[whatsapp_no.]" />
+            <Input
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              type="text"
+              variant="underlined"
+              label="phone_no.[whatsapp_no.]"
+            />
           </div>
         </CardBody>
         {/* <Divider /> */}
         <CardFooter>
-            <div className="justify-items-end mb-3">
-          <Button
-          onClick={handleSubmit}
-            radius="full"
-            className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-          >
-            Submit your response --- ❤️
-          </Button>
+          <div className="justify-items-end mb-3">
+            <Button
+              onClick={handleSubmit}
+              radius="full"
+              className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+            >
+              Submit your response --- ❤️
+            </Button>
           </div>
         </CardFooter>
       </Card>

@@ -22,7 +22,7 @@ export default function RegisterForm() {
     }
 
     axios
-      .post(`http://127.0.0.1:8000/signup`, {
+      .post(`https://verve-fest.onrender.com/signup`, {
         name,
         email,
         password,
