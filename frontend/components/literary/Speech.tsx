@@ -36,7 +36,7 @@ const Speech = () => {
     }
 
     axios
-      .post(`www.backend.verve.dakshalnjpit.in/literary/speech`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/literary/speech`, {
         name,
         branch,
         roll,

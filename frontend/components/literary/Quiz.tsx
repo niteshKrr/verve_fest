@@ -36,7 +36,7 @@ const Quiz = () => {
     }
 
     axios
-      .post(`www.backend.verve.dakshalnjpit.in/literary/quiz`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/literary/quiz`, {
         name,
         branch,
         roll,

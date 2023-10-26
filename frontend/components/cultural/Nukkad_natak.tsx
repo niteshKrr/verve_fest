@@ -36,7 +36,7 @@ const Nukkad_natak = () => {
     }
 
     axios
-      .post(`www.backend.verve.dakshalnjpit.in/cultural/nukkad_natak`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/nukkad_natak`, {
         name,
         branch,
         roll,

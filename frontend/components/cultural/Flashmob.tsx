@@ -36,7 +36,7 @@ const Flashmob = () => {
     }
 
     axios
-      .post(`www.backend.verve.dakshalnjpit.in/cultural/flashmob`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/flashmob`, {
         name,
         branch,
         roll,

@@ -37,7 +37,7 @@ const Badminton = () => {
     }
 
     axios
-      .post(`www.backend.verve.dakshalnjpit.in/sports/badminton`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/badminton`, {
         name,
         des,
         branch,

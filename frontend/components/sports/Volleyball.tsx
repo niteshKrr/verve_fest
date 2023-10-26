@@ -38,7 +38,7 @@ const Volleyball = () => {
     }
 
     axios
-      .post(`www.backend.verve.dakshalnjpit.in/sports/volleyball`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/volleyball`, {
         name,
         des,
         branch,
