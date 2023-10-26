@@ -16,6 +16,7 @@ type AllEventsProps = {
   EventImg: string;
   UrlLink: string;
   linkcolor: string;
+  Drivelink: string;
 };
 
 const Event_card = ({
@@ -23,6 +24,7 @@ const Event_card = ({
   EventImg,
   UrlLink,
   linkcolor,
+  Drivelink,
 }: AllEventsProps) => {
   return (
     <Card className="max-w-[410px] mb-6 skew-y-3">
@@ -44,6 +46,13 @@ const Event_card = ({
         <Link className={linkcolor} href={UrlLink}>
           Explore now.... 🥳
         </Link>
+        <div className="pl-8 text-right">
+          <div className={linkcolor}>
+            <a target="_blank" href={Drivelink}>
+              Download Rule_book... 📝
+            </a>
+          </div>
+        </div>
       </CardFooter>
     </Card>
   );

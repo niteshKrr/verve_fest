@@ -19,6 +19,7 @@ const page = () => {
                 EventImg="/sports.jpg"
                 UrlLink="/sports"
                 linkcolor="text-purple-500"
+                Drivelink="https://drive.google.com/file/d/1Xrpp2cndJWGK9X2WkJpXcn_Cjb3fcY_-/view?usp=drivesdk"
               />
             </div>
             <div>
@@ -27,14 +28,16 @@ const page = () => {
                 EventImg="/literary.jpg"
                 UrlLink="/literary"
                 linkcolor="text-green-500"
+                Drivelink="https://drive.google.com/file/d/1XEAS8o0a80rSR5g2u2P0GVOVGuBQGKIO/view?usp=drivesdk"
               />
             </div>
             <div>
               <Event_card
-                EventName="Cultural"
+                EventName="Art & Cultural"
                 EventImg="/cultural.jpg"
                 UrlLink="/cultural"
                 linkcolor="text-red-500"
+                Drivelink="https://drive.google.com/file/d/1XZYElBTWDnRZdQr4Duge5aY7wP0Ysl4l/view?usp=drivesdk"
               />
             </div>
           </div>
