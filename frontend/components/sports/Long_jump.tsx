@@ -14,6 +14,7 @@ import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import styles from "../../app/styles/Body.module.css";
 
 const Long_jump = () => {
   const [name, setName] = useState("");
@@ -71,7 +72,8 @@ const Long_jump = () => {
   };
 
   return (
-    <div className="grid place-items-center h-screen bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
+    <div className={styles.form}>
+    <div className="grid place-items-center h-screen">
       <Card className="sm:w-96">
         <CardHeader className="flex gap-4 my-3">
           <Image
@@ -154,6 +156,7 @@ const Long_jump = () => {
           </div>
         </CardFooter>
       </Card>
+    </div>
     </div>
   );
 };

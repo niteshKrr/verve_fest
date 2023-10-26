@@ -25,7 +25,7 @@ const Event_card = ({
   linkcolor,
 }: AllEventsProps) => {
   return (
-    <Card className="max-w-[410px] mb-4">
+    <Card className="max-w-[410px] mb-6 skew-y-3">
       <CardHeader>
         <p className="text-md font-bold mr-4">{EventName} </p>
       </CardHeader>

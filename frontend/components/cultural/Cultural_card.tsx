@@ -17,7 +17,7 @@ type CulturalCardProps = {
 
 const Cultural_card = ({ name, img, linkUrl }:CulturalCardProps) => {
   return (
-    <Card className="max-w-[410px] mb-4">
+    <Card className="max-w-[410px] mb-6 skew-y-3">
       <CardHeader className="flex gap-3">
         <Image
           alt="Loading..."
