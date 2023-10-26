@@ -37,7 +37,7 @@ const Carrom = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/sports/carrom`, {
+      .post(`www.backend.verve.dakshalnjpit.in/sports/carrom`, {
         name,
         des,
         branch,

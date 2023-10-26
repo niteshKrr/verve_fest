@@ -36,7 +36,7 @@ const Theme_based = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/theme_based`, {
+      .post(`www.backend.verve.dakshalnjpit.in/cultural/theme_based`, {
         name,
         branch,
         roll,

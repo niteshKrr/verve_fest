@@ -36,7 +36,7 @@ const Singing = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/singing`, {
+      .post(`www.backend.verve.dakshalnjpit.in/cultural/singing`, {
         name,
         branch,
         roll,

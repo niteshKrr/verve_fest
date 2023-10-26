@@ -36,16 +36,13 @@ const Group_discussion = () => {
     }
 
     axios
-      .post(
-        `https://www.backend.verve.dakshalnjpit.in/literary/group_discussion`,
-        {
-          name,
-          branch,
-          roll,
-          batch,
-          phone,
-        }
-      )
+      .post(`www.backend.verve.dakshalnjpit.in/literary/group_discussion`, {
+        name,
+        branch,
+        roll,
+        batch,
+        phone,
+      })
       .then(() => {
         Swal.fire({
           title: "Done",

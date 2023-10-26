@@ -38,7 +38,7 @@ const Debate = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/literary/debate`, {
+      .post(`www.backend.verve.dakshalnjpit.in/literary/debate`, {
         name,
         des,
         branch,

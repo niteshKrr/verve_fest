@@ -38,7 +38,7 @@ const Kabaddi = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/sports/kabaddi`, {
+      .post(`www.backend.verve.dakshalnjpit.in/sports/kabaddi`, {
         name,
         des,
         branch,

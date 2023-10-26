@@ -36,7 +36,7 @@ const Table_tennis = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/sports/table_tennis`, {
+      .post(`www.backend.verve.dakshalnjpit.in/sports/table_tennis`, {
         name,
         branch,
         roll,

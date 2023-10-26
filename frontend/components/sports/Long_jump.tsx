@@ -36,7 +36,7 @@ const Long_jump = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/sports/long_jump`, {
+      .post(`www.backend.verve.dakshalnjpit.in/sports/long_jump`, {
         name,
         branch,
         roll,

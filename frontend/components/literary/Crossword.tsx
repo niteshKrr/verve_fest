@@ -36,7 +36,7 @@ const Crossword = () => {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/literary/crossword`, {
+      .post(`www.backend.verve.dakshalnjpit.in/literary/crossword`, {
         name,
         branch,
         roll,

@@ -36,16 +36,13 @@ const Stand_up_comedy = () => {
     }
 
     axios
-      .post(
-        `https://www.backend.verve.dakshalnjpit.in/cultural/stand_up_comedy`,
-        {
-          name,
-          branch,
-          roll,
-          batch,
-          phone,
-        }
-      )
+      .post(`www.backend.verve.dakshalnjpit.in/cultural/stand_up_comedy`, {
+        name,
+        branch,
+        roll,
+        batch,
+        phone,
+      })
       .then(() => {
         Swal.fire({
           title: "Done",
