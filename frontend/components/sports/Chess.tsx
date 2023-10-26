@@ -36,7 +36,7 @@ const Chess = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/sports/chess`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/chess`, {
         name,
         branch,
         roll,

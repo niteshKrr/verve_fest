@@ -36,7 +36,7 @@ const Poetry = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/literary/poetry`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/literary/poetry`, {
         name,
         branch,
         roll,

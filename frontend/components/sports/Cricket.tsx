@@ -38,7 +38,7 @@ const Cricket = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/sports/cricket`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/cricket`, {
         name,
         des,
         branch,

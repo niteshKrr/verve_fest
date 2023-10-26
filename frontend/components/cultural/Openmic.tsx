@@ -36,7 +36,7 @@ const Openmic = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/cultural/openmic`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/openmic`, {
         name,
         branch,
         roll,

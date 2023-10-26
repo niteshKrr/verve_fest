@@ -36,7 +36,7 @@ const Shotput = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/sports/shotput`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/shotput`, {
         name,
         branch,
         roll,

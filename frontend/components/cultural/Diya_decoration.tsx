@@ -36,13 +36,16 @@ const Diya_decoration = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/cultural/diya_decoration`, {
-        name,
-        branch,
-        roll,
-        batch,
-        phone,
-      })
+      .post(
+        `https://www.backend.verve.dakshalnjpit.in/cultural/diya_decoration`,
+        {
+          name,
+          branch,
+          roll,
+          batch,
+          phone,
+        }
+      )
       .then(() => {
         Swal.fire({
           title: "Done",

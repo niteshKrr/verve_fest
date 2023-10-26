@@ -36,7 +36,7 @@ const Essay = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/literary/essay`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/literary/essay`, {
         name,
         branch,
         roll,

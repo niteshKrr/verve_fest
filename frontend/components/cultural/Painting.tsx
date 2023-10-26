@@ -36,7 +36,7 @@ const Painting = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/cultural/painting`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/painting`, {
         name,
         branch,
         roll,

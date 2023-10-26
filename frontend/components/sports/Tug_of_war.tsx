@@ -38,7 +38,7 @@ const Tug_of_war = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/sports/tug_of_war`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/tug_of_war`, {
         name,
         des,
         branch,

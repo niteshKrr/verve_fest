@@ -38,7 +38,7 @@ const Kho_kho = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/sports/kho_kho`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/kho_kho`, {
         name,
         des,
         branch,

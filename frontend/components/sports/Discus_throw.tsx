@@ -36,7 +36,7 @@ const Discus_throw = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/sports/discus_throw`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/sports/discus_throw`, {
         name,
         branch,
         roll,

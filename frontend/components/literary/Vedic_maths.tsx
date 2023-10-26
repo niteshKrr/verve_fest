@@ -36,7 +36,7 @@ const Vedic_maths = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/literary/vedic_maths`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/literary/vedic_maths`, {
         name,
         branch,
         roll,

@@ -36,7 +36,7 @@ const Calligraphy = () => {
     }
 
     axios
-      .post(`https://verve-fest.onrender.com/cultural/calligraphy`, {
+      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/calligraphy`, {
         name,
         branch,
         roll,
