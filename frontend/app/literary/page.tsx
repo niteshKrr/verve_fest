@@ -16,19 +16,19 @@ const page = () => {
         <Literary_card name="Essay" img="/literary/Essay/1.jpg" linkUrl="/literary/essay" />
       </div>
       <div>
-        <Literary_card name="Group_discussion" img="/literary/GD/1.jpg" linkUrl="/literary/group_discussion" />
+        <Literary_card name="Group_discussion" img="/literary/GD/4.jpg" linkUrl="/literary/group_discussion" />
       </div>
       <div>
         <Literary_card name="Poetry" img="/literary/Poetry/3.jpg" linkUrl="/literary/poetry" />
       </div>
       <div>
-        <Literary_card name="Quiz" img="/literary/Quiz/3.avif" linkUrl="/literary/quiz" />
+        <Literary_card name="Quiz" img="/literary/Quiz/2.jpg" linkUrl="/literary/quiz" />
       </div>
       <div>
         <Literary_card name="Speech" img="/literary/Speech/2.jpg" linkUrl="/literary/speech" />
       </div>
       <div>
-        <Literary_card name="Vedic_maths" img="/literary/Vedic_maths/1.jpg" linkUrl="/literary/vedic_maths" />
+        <Literary_card name="Vedic_maths" img="/literary/Vedic_maths/3.jpg" linkUrl="/literary/vedic_maths" />
       </div>
     </div>
     </div>

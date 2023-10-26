@@ -31,7 +31,7 @@ const page = () => {
         <Sport_card name="Shotput" img="/sports/Shotput/1.jpg" linkUrl="/sports/shotput" />
       </div>
       <div>
-        <Sport_card name="Athletics [long_jump]" img="/sports/Athletics/3.jpg" linkUrl="/sports/long_jump" />
+        <Sport_card name="Athletics [long_jump]" img="/sports/Athletics/1.jpg" linkUrl="/sports/long_jump" />
       </div>
       <div>
         <Sport_card name="Tug_of_war" img="/sports/Tug_of_war/1.jpg" linkUrl="/sports/tug_of_war" />

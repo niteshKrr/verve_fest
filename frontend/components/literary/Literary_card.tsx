@@ -5,9 +5,9 @@ import {
   CardBody,
   CardFooter,
   Divider,
-  Link,
-  Image,
 } from "@nextui-org/react";
+import Image from "next/image";
+import Link from "next/link";
 
 type LiteraryCardProps = {
   name: string;
@@ -22,7 +22,7 @@ const Literary_card = ({ name, img, linkUrl }:LiteraryCardProps) => {
         <Image
           alt="card logo"
           height={40}
-          radius="sm"
+          // radius="sm"
           src="/daksha_logo.png"
           width={40}
         />
@@ -35,6 +35,8 @@ const Literary_card = ({ name, img, linkUrl }:LiteraryCardProps) => {
       <CardBody>
         <div>
           <Image
+          width={300}
+          height={300}
             alt="Loading..."
             className="z-0 w-full h-80 object-cover"
             src={img}
@@ -43,8 +45,8 @@ const Literary_card = ({ name, img, linkUrl }:LiteraryCardProps) => {
       </CardBody>
       <Divider />
       <CardFooter>
-        <Link showAnchorIcon href={linkUrl}>
-          Participate now !
+      <Link className="font-sans text-green-500" href={linkUrl}>
+          Participate now...  👥
         </Link>
       </CardFooter>
     </Card>
