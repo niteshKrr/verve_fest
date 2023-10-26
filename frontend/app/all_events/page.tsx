@@ -1,6 +1,7 @@
 import React from "react";
 import Event_card from "@/components/all_events/Event_card";
 import Navbaar from "@/components/layout/Navbaar";
+import styles from "../../app/styles/Body.module.css";
 
 const page = () => {
   return (

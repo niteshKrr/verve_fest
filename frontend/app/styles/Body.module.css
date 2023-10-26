@@ -1,0 +1,10 @@
+
+.body {
+    background-image: url('/bg1.jpg');
+    opacity: 0.8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative; 
+};

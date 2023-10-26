@@ -7,16 +7,16 @@ import {Button} from "@nextui-org/react";
 
 const Body = () => {
   return (
-    <div className="grid place-items-center h-screen bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
-        <div className="text-center">
+    <div className={styles.body}>
+        <div className="grid place-items-center pt-40">
             <div
-              className="text-3xl font-serif sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-black underline"
+              className="text-3xl text-white font-serif sm:text-4xl md:text-5xl lg:text-6xl font-extrabold underline"
             >
               VERVE FEST
             </div>
             <div
-              className="text-xl sm:text-4xl font-mono text-white mt-8"
-              //   style={{ height: "100px" }}
+              className="text-xl sm:text-4xl text-center font-mono text-white pt-10 mx-6"
+                style={{ height: "150px" }}
             >
               <TypeAnimation
                 style={{
@@ -27,7 +27,7 @@ const Body = () => {
                 sequence={[
                   "Where... 🤔",
                   2000,
-                  `Unleash Your Inner Athlete!\nExploring Culture, Celebrating Diversity!\nDiscover Worlds Between the Pages!`,
+                  `Creativity Meets Celebration!\nYour Event, Your Story!\nTalents Converge, Passions Thrive!`,
                   2000,
                 ]}
                 // wrapper="span"
@@ -36,13 +36,13 @@ const Body = () => {
                 repeat={Infinity}
               />
             </div>
-        </div>
-        <div>
+        <div className="pt-28">
           <Button color="default" variant="bordered">
-            <Link href="/all_events" className="font-bold mx-2">
-              Participate_now... 🤜🤛
+            <Link href="/all_events" className="font-bold mx-2 text-white">
+              Register now... 🤜🤛
             </Link>
           </Button> 
+        </div>
         </div>
     </div>
   );
