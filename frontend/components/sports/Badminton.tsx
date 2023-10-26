@@ -22,6 +22,7 @@ const Badminton = () => {
   const [roll, setRoll] = useState("");
   const [batch, setBatch] = useState("");
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -35,6 +36,7 @@ const Badminton = () => {
       });
       return;
     }
+    setLoading(true);
 
     axios
       .post(`https://www.backend.verve.dakshalnjpit.in/sports/badminton`, {
@@ -46,6 +48,7 @@ const Badminton = () => {
         phone,
       })
       .then(() => {
+        setLoading(false);
         Swal.fire({
           title: "Done",
           text: "Your request has been successfully submitted",
@@ -60,6 +63,7 @@ const Badminton = () => {
         setDes("");
       })
       .catch((e) => {
+        setLoading(false);
         Swal.fire({
           icon: "error",
           title: "Oops...",

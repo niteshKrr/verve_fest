@@ -21,6 +21,7 @@ const Flashmob = () => {
   const [roll, setRoll] = useState("");
   const [batch, setBatch] = useState("");
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -34,6 +35,7 @@ const Flashmob = () => {
       });
       return;
     }
+    setLoading(true);
 
     axios
       .post(`https://www.backend.verve.dakshalnjpit.in/cultural/flashmob`, {
@@ -44,6 +46,7 @@ const Flashmob = () => {
         phone,
       })
       .then(() => {
+        setLoading(false);
         Swal.fire({
           title: "Done",
           text: "Your request has been successfully submitted",
@@ -57,6 +60,7 @@ const Flashmob = () => {
         setPhone("");
       })
       .catch((e) => {
+        setLoading(false);
         Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -131,13 +135,22 @@ const Flashmob = () => {
         {/* <Divider /> */}
         <CardFooter>
           <div className="justify-items-end mb-3">
-            <Button
-              onClick={handleSubmit}
-              radius="full"
-              className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-            >
-              Submit your response --- ❤️
-            </Button>
+            {loading === false ? (
+              <Button
+                onClick={handleSubmit}
+                radius="full"
+                className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+              >
+                Submit your response --- ❤️
+              </Button>
+            ) : (
+              <Button
+                radius="full"
+                className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+              >
+                Please wait... <div className="loader"></div>
+              </Button>
+            )}
           </div>
         </CardFooter>
       </Card>

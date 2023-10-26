@@ -21,6 +21,7 @@ const Stand_up_comedy = () => {
   const [roll, setRoll] = useState("");
   const [batch, setBatch] = useState("");
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -34,6 +35,7 @@ const Stand_up_comedy = () => {
       });
       return;
     }
+    setLoading(true);
 
     axios
       .post(
@@ -47,6 +49,7 @@ const Stand_up_comedy = () => {
         }
       )
       .then(() => {
+        setLoading(false);
         Swal.fire({
           title: "Done",
           text: "Your request has been successfully submitted",
@@ -60,6 +63,7 @@ const Stand_up_comedy = () => {
         setPhone("");
       })
       .catch((e) => {
+        setLoading(false);
         Swal.fire({
           icon: "error",
           title: "Oops...",
@@ -134,13 +138,22 @@ const Stand_up_comedy = () => {
         {/* <Divider /> */}
         <CardFooter>
           <div className="justify-items-end mb-3">
-            <Button
-              onClick={handleSubmit}
-              radius="full"
-              className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
-            >
-              Submit your response --- ❤️
-            </Button>
+            {loading === false ? (
+              <Button
+                onClick={handleSubmit}
+                radius="full"
+                className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+              >
+                Submit your response --- ❤️
+              </Button>
+            ) : (
+              <Button
+                radius="full"
+                className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+              >
+                Please wait... <div className="loader"></div>
+              </Button>
+            )}
           </div>
         </CardFooter>
       </Card>
