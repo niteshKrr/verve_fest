@@ -16,6 +16,10 @@ app.use(
   })
 );
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 app.post("/signup", (req, res) => {
   // console.log(req.body);
   const user = new User(req.body);
