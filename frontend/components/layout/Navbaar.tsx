@@ -15,7 +15,7 @@ import Image from "next/image";
 export default function Navbaar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Home", "Participate", "About"];
+  const menuItems = ["Home", "All_events", "About"];
 
   return (
     <Navbar
@@ -30,7 +30,7 @@ export default function Navbaar() {
         <NavbarBrand>
           {/* // add your logo here */}
           <Link href="/">
-          <p className="font-bold font-mono text-xl text-inherit">VERVE</p>
+            <p className="font-bold font-mono text-xl text-inherit">VERVE</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -47,35 +47,30 @@ export default function Navbaar() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="font-bold" href="/">
+          <Link className="font-bold" href="/about">
             About
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Image
-            alt="Loading..."
-            height={40}
-            src="/daksha_logo.png"
-            width={40}
-          />
+          <Link className="font-bold" href="/">
+            <Image
+              alt="Loading..."
+              height={40}
+              src="/daksha_logo.png"
+              width={40}
+            />
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
+              href={
+                item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`
               }
-              className="w-full"
-              href="/"
-              // size="lg"
             >
               {item}
             </Link>
