@@ -101,7 +101,7 @@ const Debate = () => {
               onChange={(e) => setDes(e.target.value)}
               type="text"
               variant="underlined"
-              placeholder="enter your team_name with all player's name"
+              placeholder="enter your team_name with (max 3 members)"
               className="col-span-12 md:col-span-6 mb-6 md:mb-0"
             />
           </div>

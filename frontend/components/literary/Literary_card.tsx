@@ -20,15 +20,13 @@ const Literary_card = ({ name, img, linkUrl }:LiteraryCardProps) => {
     <Card className="max-w-[410px] mb-4">
       <CardHeader className="flex gap-3">
         <Image
-          alt="card logo"
+          alt="Loading..."
           height={40}
-          // radius="sm"
           src="/daksha_logo.png"
           width={40}
         />
         <div className="flex flex-col">
           <p className="text-md font-bold">{name}</p>
-          {/* <p className="text-small text-default-500">nextui.org</p> */}
         </div>
       </CardHeader>
       <Divider />

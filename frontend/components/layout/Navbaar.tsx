@@ -1,18 +1,27 @@
-"use client"
+"use client";
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle} from "@nextui-org/react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from "@nextui-org/react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbaar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Log Out",
-  ];
+  const menuItems = ["Home", "Participate", "About"];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-orange-200">
+    <Navbar
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500"
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -20,35 +29,37 @@ export default function Navbaar() {
         />
         <NavbarBrand>
           {/* // add your logo here */}
-          <p className="font-bold text-inherit">VERVE</p>
+          <Link href="/">
+          <p className="font-bold font-mono text-xl text-inherit">VERVE</p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="font-bold" href="/">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Participate
+          <Link href="/all_events" className="font-bold mx-4">
+            Events
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="font-bold" href="/">
             About
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="/signup" variant="flat">
-            Sign Up
-          </Button>
+          <Image
+            alt="Loading..."
+            height={40}
+            src="/daksha_logo.png"
+            width={40}
+          />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
@@ -56,11 +67,15 @@ export default function Navbaar() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                index === 2
+                  ? "primary"
+                  : index === menuItems.length - 1
+                  ? "danger"
+                  : "foreground"
               }
               className="w-full"
-              href="#"
-              size="lg"
+              href="/"
+              // size="lg"
             >
               {item}
             </Link>
