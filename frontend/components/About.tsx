@@ -36,7 +36,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="pl-3 py-10">
+        <div className="pl-4 py-12">
           <p className="text-white">👨‍💻 👉 Code architect :- <span className="font-bold underline">Nitesh Kumar [2k20]</span> </p>
         </div>
       </div>
