@@ -28,7 +28,7 @@ const page = () => {
                 EventImg="/literary.jpg"
                 UrlLink="/literary"
                 linkcolor="text-green-500"
-                Drivelink="https://drive.google.com/file/d/1XEAS8o0a80rSR5g2u2P0GVOVGuBQGKIO/view?usp=drivesdk"
+                Drivelink="https://drive.google.com/file/d/1Yt3pMGek0Z1JtP4o21aKMM0Va_LDIUDQ/view?usp=drivesdk"
               />
             </div>
             <div>

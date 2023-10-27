@@ -32,11 +32,11 @@ const About = () => {
               & zeap... Verve is an embodiment of you all.
             </div>
             <div className="text-white font-bold pt-3 text-lg sm:text-xl">
-              👉 " Let's participate & sweat to glory together "
+              " Let's participate & sweat to glory together "
             </div>
           </div>
         </div>
-        <div className="px-2 py-10">
+        <div className="pl-3 py-10">
           <p className="text-white">👨‍💻 👉 Code architect :- <span className="font-bold underline">Nitesh Kumar [2k20]</span> </p>
         </div>
       </div>
