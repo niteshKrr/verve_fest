@@ -22,7 +22,7 @@ export default function RegisterForm() {
     }
 
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/signup`, {
+      .post(`www.backend.verve.dakshalnjpit.in/signup`, {
         name,
         email,
         password,

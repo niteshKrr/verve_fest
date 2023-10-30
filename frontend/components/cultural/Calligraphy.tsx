@@ -38,7 +38,7 @@ const Calligraphy = () => {
     }
     setLoading(true);
     axios
-      .post(`https://www.backend.verve.dakshalnjpit.in/cultural/calligraphy`, {
+      .post(`www.backend.verve.dakshalnjpit.in/cultural/calligraphy`, {
         name,
         branch,
         roll,
@@ -64,7 +64,7 @@ const Calligraphy = () => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "an error occurred",
+          text: "Registration closed",
           confirmButtonColor: "#D6465B",
         });
       });
